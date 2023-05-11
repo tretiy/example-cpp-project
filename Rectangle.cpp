@@ -4,14 +4,15 @@
 // Description: Rectangle class
 
 #include "Rectangle.hpp"
+{
+  // Constructor for Rectangle
+  Rectangle::Rectangle(int height, int width) : Polygon(height, width) {}
 
-// Constructor for Rectangle
-Rectangle::Rectangle(int height, int width): Polygon(height, width) {}
-
-// Destructor
-Rectangle::~Rectangle() {}
+  // Destructor
+  Rectangle::~Rectangle() {}
 
 // Returns the area of the rectangle
-float Rectangle::area() {
-	return m_height * m_width;
+#ifdef RELEASE_DEFINE
+  float Rectangle::area() { return m_height * m_width; }
+#endif
 }

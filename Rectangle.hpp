@@ -8,15 +8,17 @@
 
 #include "Polygon.hpp"
 
-class Rectangle: public Polygon {
+class Rectangle : public Polygon {
 public:
-	// Constructor
-	Rectangle(int height, int width);
-	// Trivial Destructor
-	~Rectangle();
+  // Constructor
+  Rectangle(int height, int width);
+  // Trivial Destructor
+  ~Rectangle();
 
-	// Area method (polymorphic)
-	float area();
+// Area method (polymorphic)
+#ifdef RELEASE_DEFINE
+  float area();
+#endif
 };
 
 #endif // RECTANGLE_H_
