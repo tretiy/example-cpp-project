@@ -4,7 +4,7 @@
 // Description: Rectangle class
 
 #include "Rectangle.hpp"
-{
+
   // Constructor for Rectangle
   Rectangle::Rectangle(int height, int width) : Polygon(height, width) {}
 
@@ -15,4 +15,3 @@
 #ifdef RELEASE_DEFINE
   float Rectangle::area() { return m_height * m_width; }
 #endif
-}
