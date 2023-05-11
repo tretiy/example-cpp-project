@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "language": "c++",
+      "buildTool": "cmake",
+      "dockerContainer": {
+        "image": "cpp-build-tool-worker",
+        "cpus": 1.0,
+        "memory": "1G"
+      },
+      "defaultProfile": "Debug",
+      "compilationProfiles": [
+        {
+          "name": "Debug",
+          "description": "",
+          "arguments": [
+            "-DDEBUG_DEFINE=1"
+          ]
+        },
+		{
+          "name": "Release",
+          "description": "",
+          "arguments": [
+            "-DRELEASE_DEFINE=1"
+          ]
+        }
+      ]
+    }
+  ]
+}
